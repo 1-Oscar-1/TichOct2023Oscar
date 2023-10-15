@@ -1,0 +1,11 @@
+C:\Users\Tichs\Documents\Practicas C#\LINKQ\LINKQ\bin\Debug\LINKQ.exe.config
+C:\Users\Tichs\Documents\Practicas C#\LINKQ\LINKQ\bin\Debug\LINKQ.exe
+C:\Users\Tichs\Documents\Practicas C#\LINKQ\LINKQ\bin\Debug\LINKQ.pdb
+C:\Users\Tichs\Documents\Practicas C#\LINKQ\LINKQ\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Tichs\Documents\Practicas C#\LINKQ\LINKQ\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Tichs\Documents\Practicas C#\LINKQ\LINKQ\obj\Debug\LINKQ.csproj.AssemblyReference.cache
+C:\Users\Tichs\Documents\Practicas C#\LINKQ\LINKQ\obj\Debug\LINKQ.csproj.SuggestedBindingRedirects.cache
+C:\Users\Tichs\Documents\Practicas C#\LINKQ\LINKQ\obj\Debug\LINKQ.csproj.CoreCompileInputs.cache
+C:\Users\Tichs\Documents\Practicas C#\LINKQ\LINKQ\obj\Debug\LINKQ.csproj.CopyComplete
+C:\Users\Tichs\Documents\Practicas C#\LINKQ\LINKQ\obj\Debug\LINKQ.exe
+C:\Users\Tichs\Documents\Practicas C#\LINKQ\LINKQ\obj\Debug\LINKQ.pdb

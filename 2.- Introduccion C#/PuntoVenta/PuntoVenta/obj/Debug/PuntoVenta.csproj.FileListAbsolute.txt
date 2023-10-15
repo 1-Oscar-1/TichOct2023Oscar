@@ -1,0 +1,21 @@
+C:\Users\aguil\source\bootcamp\c#\PuntoVenta\PuntoVenta\obj\Debug\PuntoVenta.csproj.AssemblyReference.cache
+C:\Users\aguil\source\bootcamp\c#\PuntoVenta\PuntoVenta\obj\Debug\PuntoVenta.csproj.CoreCompileInputs.cache
+C:\Users\aguil\source\bootcamp\c#\PuntoVenta\PuntoVenta\bin\Debug\PuntoVenta.exe.config
+C:\Users\aguil\source\bootcamp\c#\PuntoVenta\PuntoVenta\bin\Debug\PuntoVenta.exe
+C:\Users\aguil\source\bootcamp\c#\PuntoVenta\PuntoVenta\bin\Debug\PuntoVenta.pdb
+C:\Users\aguil\source\bootcamp\c#\PuntoVenta\PuntoVenta\bin\Debug\Newtonsoft.Json.dll
+C:\Users\aguil\source\bootcamp\c#\PuntoVenta\PuntoVenta\bin\Debug\Newtonsoft.Json.xml
+C:\Users\aguil\source\bootcamp\c#\PuntoVenta\PuntoVenta\obj\Debug\PuntoVenta.csproj.CopyComplete
+C:\Users\aguil\source\bootcamp\c#\PuntoVenta\PuntoVenta\obj\Debug\PuntoVenta.exe
+C:\Users\aguil\source\bootcamp\c#\PuntoVenta\PuntoVenta\obj\Debug\PuntoVenta.pdb
+C:\Users\Tichs\Documents\Practicas C#\PuntoVenta\PuntoVenta\bin\Debug\PuntoVenta.exe.config
+C:\Users\Tichs\Documents\Practicas C#\PuntoVenta\PuntoVenta\bin\Debug\PuntoVenta.exe
+C:\Users\Tichs\Documents\Practicas C#\PuntoVenta\PuntoVenta\bin\Debug\PuntoVenta.pdb
+C:\Users\Tichs\Documents\Practicas C#\PuntoVenta\PuntoVenta\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Tichs\Documents\Practicas C#\PuntoVenta\PuntoVenta\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Tichs\Documents\Practicas C#\PuntoVenta\PuntoVenta\obj\Debug\PuntoVenta.csproj.AssemblyReference.cache
+C:\Users\Tichs\Documents\Practicas C#\PuntoVenta\PuntoVenta\obj\Debug\PuntoVenta.csproj.SuggestedBindingRedirects.cache
+C:\Users\Tichs\Documents\Practicas C#\PuntoVenta\PuntoVenta\obj\Debug\PuntoVenta.csproj.CoreCompileInputs.cache
+C:\Users\Tichs\Documents\Practicas C#\PuntoVenta\PuntoVenta\obj\Debug\PuntoVenta.csproj.CopyComplete
+C:\Users\Tichs\Documents\Practicas C#\PuntoVenta\PuntoVenta\obj\Debug\PuntoVenta.exe
+C:\Users\Tichs\Documents\Practicas C#\PuntoVenta\PuntoVenta\obj\Debug\PuntoVenta.pdb

@@ -1,0 +1,8 @@
+C:\Users\Tichs\Documents\Practicas C#\Calculadora IMSS\Calculadora IMSS\obj\Debug\Calculadora IMSS.csproj.AssemblyReference.cache
+C:\Users\Tichs\Documents\Practicas C#\Calculadora IMSS\Calculadora IMSS\obj\Debug\Calculadora IMSS.csproj.SuggestedBindingRedirects.cache
+C:\Users\Tichs\Documents\Practicas C#\Calculadora IMSS\Calculadora IMSS\obj\Debug\Calculadora IMSS.csproj.CoreCompileInputs.cache
+C:\Users\Tichs\Documents\Practicas C#\Calculadora IMSS\Calculadora IMSS\bin\Debug\Calculadora IMSS.exe.config
+C:\Users\Tichs\Documents\Practicas C#\Calculadora IMSS\Calculadora IMSS\bin\Debug\Calculadora IMSS.exe
+C:\Users\Tichs\Documents\Practicas C#\Calculadora IMSS\Calculadora IMSS\bin\Debug\Calculadora IMSS.pdb
+C:\Users\Tichs\Documents\Practicas C#\Calculadora IMSS\Calculadora IMSS\obj\Debug\Calculadora IMSS.exe
+C:\Users\Tichs\Documents\Practicas C#\Calculadora IMSS\Calculadora IMSS\obj\Debug\Calculadora IMSS.pdb
