@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "HolaMundo";
+    int hora = DateTime.Today.Hour;
+}
+
+<h1>Bienvenido</h1>
+<p>Hoy es @DateTime.Today.ToString()</p>
+
+@{
+    if (hora >= 5 && hora < 13)
+    {
+        <p>Buenos dias</p>
+    }
+    else if (hora < 19)
+    {
+        <p>Buenas tardes</p>
+    }
+    else
+    {
+        <p>Buenas noches</p>
+    }
+}
+
+<p>@Request.Url</p>
+<p>@Request.FilePath</p>
+<p>@Server.MapPath(Request.FilePath)</p>
+<p>@Request.RequestType</p>
+

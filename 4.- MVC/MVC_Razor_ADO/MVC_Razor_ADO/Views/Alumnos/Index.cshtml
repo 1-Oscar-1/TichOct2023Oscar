@@ -1,0 +1,46 @@
+﻿@model List<Entidades.Alumno>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1>Listado Alumnos</h1>
+<hr />
+@Html.ActionLink("Agregar", "Create", "Alumnos", null, new { @class = "btn btn-primary" })
+
+<table class="table table-responsive">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Primer Apellido</th>
+            <th>Segundo Apellido</th>
+            <th>Correo</th>
+            <th>Telefono</th>
+            <th>Estado</th>
+            <th>Estatus</th>
+            <th>Acciones</th>
+        </tr> 
+    </thead>
+    <tbody>
+        @{
+            foreach (var alumno in Model)
+            {
+                <tr>
+                    <td>@alumno.id</td>
+                    <td>@alumno.nombre</td>
+                    <td>@alumno.primerApellido</td>
+                    <td>@alumno.segundoApellido</td>
+                    <td>@alumno.correo</td>
+                    <td>@alumno.telefono</td>
+                    <td>@alumno.idEstado</td>
+                    <td>@alumno.idEstatus</td>
+                    <td>
+                        @Html.ActionLink("Detalles", "Details", "Alumnos", new { id = alumno.id }, new { @class = "btn btn-warning" })
+                        @Html.ActionLink("Editar", "Edit", "Alumnos", new { id = alumno.id }, new { @class = "btn btn-success" })
+                        @Html.ActionLink("Eliminar", "Delete", "Alumnos", new { id = alumno.id }, new { @class = "btn btn-danger" })
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

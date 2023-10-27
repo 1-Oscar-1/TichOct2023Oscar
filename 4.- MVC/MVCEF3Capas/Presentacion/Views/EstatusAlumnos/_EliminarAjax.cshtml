@@ -1,0 +1,24 @@
+﻿@model Entidades.EstatusAlumnos
+<h5>Estado</h5>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt id="ModalId" class="d-none">@Html.DisplayFor(model => model.id)</dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.clave)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.clave)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+    </dl>
+</div>

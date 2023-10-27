@@ -1,0 +1,9 @@
+C:\Users\Tichs\Documents\Practicas C#\CRUDAlumnos\Datos\bin\Release\Datos.dll
+C:\Users\Tichs\Documents\Practicas C#\CRUDAlumnos\Datos\bin\Release\Datos.pdb
+C:\Users\Tichs\Documents\Practicas C#\CRUDAlumnos\Datos\bin\Release\Entidades.dll
+C:\Users\Tichs\Documents\Practicas C#\CRUDAlumnos\Datos\bin\Release\Entidades.pdb
+C:\Users\Tichs\Documents\Practicas C#\CRUDAlumnos\Datos\obj\Release\Datos.csproj.AssemblyReference.cache
+C:\Users\Tichs\Documents\Practicas C#\CRUDAlumnos\Datos\obj\Release\Datos.csproj.CoreCompileInputs.cache
+C:\Users\Tichs\Documents\Practicas C#\CRUDAlumnos\Datos\obj\Release\Datos.csproj.CopyComplete
+C:\Users\Tichs\Documents\Practicas C#\CRUDAlumnos\Datos\obj\Release\Datos.dll
+C:\Users\Tichs\Documents\Practicas C#\CRUDAlumnos\Datos\obj\Release\Datos.pdb

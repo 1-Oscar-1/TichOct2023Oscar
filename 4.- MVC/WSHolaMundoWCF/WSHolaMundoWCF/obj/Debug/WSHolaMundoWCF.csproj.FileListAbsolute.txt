@@ -1,0 +1,7 @@
+C:\Users\Tichs\Documents\Practicas C#\WSHolaMundoWCF\WSHolaMundoWCF\bin\WSHolaMundoWCF.dll.config
+C:\Users\Tichs\Documents\Practicas C#\WSHolaMundoWCF\WSHolaMundoWCF\bin\WSHolaMundoWCF.dll
+C:\Users\Tichs\Documents\Practicas C#\WSHolaMundoWCF\WSHolaMundoWCF\bin\WSHolaMundoWCF.pdb
+C:\Users\Tichs\Documents\Practicas C#\WSHolaMundoWCF\WSHolaMundoWCF\obj\Debug\WSHolaMundoWCF.csproj.AssemblyReference.cache
+C:\Users\Tichs\Documents\Practicas C#\WSHolaMundoWCF\WSHolaMundoWCF\obj\Debug\WSHolaMundoWCF.csproj.CoreCompileInputs.cache
+C:\Users\Tichs\Documents\Practicas C#\WSHolaMundoWCF\WSHolaMundoWCF\obj\Debug\WSHolaMundoWCF.dll
+C:\Users\Tichs\Documents\Practicas C#\WSHolaMundoWCF\WSHolaMundoWCF\obj\Debug\WSHolaMundoWCF.pdb

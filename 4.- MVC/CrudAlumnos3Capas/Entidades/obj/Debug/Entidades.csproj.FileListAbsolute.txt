@@ -1,0 +1,12 @@
+C:\Users\Tichs\Documents\Practicas C#\CrudAlumnos3Capas\Entidades\bin\Debug\Entidades.dll.config
+C:\Users\Tichs\Documents\Practicas C#\CrudAlumnos3Capas\Entidades\bin\Debug\Entidades.dll
+C:\Users\Tichs\Documents\Practicas C#\CrudAlumnos3Capas\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Tichs\Documents\Practicas C#\CrudAlumnos3Capas\Entidades\bin\Debug\EntityFramework.dll
+C:\Users\Tichs\Documents\Practicas C#\CrudAlumnos3Capas\Entidades\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tichs\Documents\Practicas C#\CrudAlumnos3Capas\Entidades\bin\Debug\EntityFramework.xml
+C:\Users\Tichs\Documents\Practicas C#\CrudAlumnos3Capas\Entidades\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tichs\Documents\Practicas C#\CrudAlumnos3Capas\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\Tichs\Documents\Practicas C#\CrudAlumnos3Capas\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Tichs\Documents\Practicas C#\CrudAlumnos3Capas\Entidades\obj\Debug\Entidades.csproj.CopyComplete
+C:\Users\Tichs\Documents\Practicas C#\CrudAlumnos3Capas\Entidades\obj\Debug\Entidades.dll
+C:\Users\Tichs\Documents\Practicas C#\CrudAlumnos3Capas\Entidades\obj\Debug\Entidades.pdb

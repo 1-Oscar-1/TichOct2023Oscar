@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EjerciciosTichModelStoreContainer" CdmEntityContainer="EjerciciosTichEntities">
+    <EntitySetMapping Name="Alumnos">
+      <EntityTypeMapping TypeName="EjerciciosTichModel.Alumnos">
+        <MappingFragment StoreEntitySet="Alumnos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="primerApellido" ColumnName="primerApellido" />
+          <ScalarProperty Name="segundoApellido" ColumnName="segundoApellido" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+          <ScalarProperty Name="curp" ColumnName="curp" />
+          <ScalarProperty Name="sueldo" ColumnName="sueldo" />
+          <ScalarProperty Name="idEstadoOrigen" ColumnName="idEstadoOrigen" />
+          <ScalarProperty Name="idEstatus" ColumnName="idEstatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AlumnosBaja">
+      <EntityTypeMapping TypeName="EjerciciosTichModel.AlumnosBaja">
+        <MappingFragment StoreEntitySet="AlumnosBaja">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="primerApellido" ColumnName="primerApellido" />
+          <ScalarProperty Name="segundoApellido" ColumnName="segundoApellido" />
+          <ScalarProperty Name="fechaBaja" ColumnName="fechaBaja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatCursos">
+      <EntityTypeMapping TypeName="EjerciciosTichModel.CatCursos">
+        <MappingFragment StoreEntitySet="CatCursos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="clave" ColumnName="clave" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="horas" ColumnName="horas" />
+          <ScalarProperty Name="idPreRequisito" ColumnName="idPreRequisito" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cursos">
+      <EntityTypeMapping TypeName="EjerciciosTichModel.Cursos">
+        <MappingFragment StoreEntitySet="Cursos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idCatCurso" ColumnName="idCatCurso" />
+          <ScalarProperty Name="fechaInicio" ColumnName="fechaInicio" />
+          <ScalarProperty Name="fechaTermino" ColumnName="fechaTermino" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CursosAlumnos">
+      <EntityTypeMapping TypeName="EjerciciosTichModel.CursosAlumnos">
+        <MappingFragment StoreEntitySet="CursosAlumnos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idCurso" ColumnName="idCurso" />
+          <ScalarProperty Name="idAlumno" ColumnName="idAlumno" />
+          <ScalarProperty Name="fechaInscripcion" ColumnName="fechaInscripcion" />
+          <ScalarProperty Name="fechaBaja" ColumnName="fechaBaja" />
+          <ScalarProperty Name="calificacion" ColumnName="calificacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CursosInstructores">
+      <EntityTypeMapping TypeName="EjerciciosTichModel.CursosInstructores">
+        <MappingFragment StoreEntitySet="CursosInstructores">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idCurso" ColumnName="idCurso" />
+          <ScalarProperty Name="idInstructor" ColumnName="idInstructor" />
+          <ScalarProperty Name="fechaContratacion" ColumnName="fechaContratacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estados">
+      <EntityTypeMapping TypeName="EjerciciosTichModel.Estados">
+        <MappingFragment StoreEntitySet="Estados">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstatusAlumnos">
+      <EntityTypeMapping TypeName="EjerciciosTichModel.EstatusAlumnos">
+        <MappingFragment StoreEntitySet="EstatusAlumnos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="clave" ColumnName="clave" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Instructores">
+      <EntityTypeMapping TypeName="EjerciciosTichModel.Instructores">
+        <MappingFragment StoreEntitySet="Instructores">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="primerApellido" ColumnName="primerApellido" />
+          <ScalarProperty Name="segundoApellido" ColumnName="segundoApellido" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+          <ScalarProperty Name="rfc" ColumnName="rfc" />
+          <ScalarProperty Name="curp" ColumnName="curp" />
+          <ScalarProperty Name="cuotaHora" ColumnName="cuotaHora" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Saldos">
+      <EntityTypeMapping TypeName="EjerciciosTichModel.Saldos">
+        <MappingFragment StoreEntitySet="Saldos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Saldo" ColumnName="Saldo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="EjerciciosTichModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TablaISR">
+      <EntityTypeMapping TypeName="EjerciciosTichModel.TablaISR">
+        <MappingFragment StoreEntitySet="TablaISR">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="LimInf" ColumnName="LimInf" />
+          <ScalarProperty Name="LimSup" ColumnName="LimSup" />
+          <ScalarProperty Name="CuotaFija" ColumnName="CuotaFija" />
+          <ScalarProperty Name="ExedLimInf" ColumnName="ExedLimInf" />
+          <ScalarProperty Name="Subsidio" ColumnName="Subsidio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transacciones">
+      <EntityTypeMapping TypeName="EjerciciosTichModel.Transacciones">
+        <MappingFragment StoreEntitySet="Transacciones">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idOrigen" ColumnName="idOrigen" />
+          <ScalarProperty Name="idDestino" ColumnName="idDestino" />
+          <ScalarProperty Name="monto" ColumnName="monto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AlumnosHgo">
+      <EntityTypeMapping TypeName="EjerciciosTichModel.AlumnosHgo">
+        <MappingFragment StoreEntitySet="AlumnosHgo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="primerApellido" ColumnName="primerApellido" />
+          <ScalarProperty Name="segundoApellido" ColumnName="segundoApellido" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+          <ScalarProperty Name="curp" ColumnName="curp" />
+          <ScalarProperty Name="sueldo" ColumnName="sueldo" />
+          <ScalarProperty Name="idEstadoOrigen" ColumnName="idEstadoOrigen" />
+          <ScalarProperty Name="idEstatus" ColumnName="idEstatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

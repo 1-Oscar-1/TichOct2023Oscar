@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Entidades.Alumnos>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", null, new {@class = "btn btn-primary"})
+</p>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Primer Apellido</th>
+                <th>Segundo Apellido</th>
+                <th>Correo</th>
+                <th>Telefono</th>
+                <th>Estado</th>
+                <th>Estatus</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.primerApellido)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.segundoApellido)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.correo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.telefono)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.idEstadoOrigen)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.idEstatus)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.id }, new {@class = "btn btn-warning"})
+                        @Html.ActionLink("Details", "Details", new { id = item.id }, new { @class = "btn btn-success" })
+                        @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "btn btn-danger" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EjerciciosTichModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Alumnos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="60" />
+    <Property Name="primerApellido" Type="varchar" MaxLength="50" />
+    <Property Name="segundoApellido" Type="varchar" MaxLength="50" />
+    <Property Name="correo" Type="varchar" MaxLength="80" />
+    <Property Name="telefono" Type="nchar" MaxLength="10" />
+    <Property Name="fechaNacimiento" Type="date" />
+    <Property Name="curp" Type="char" MaxLength="18" />
+    <Property Name="sueldo" Type="decimal" Precision="9" Scale="2" />
+    <Property Name="idEstadoOrigen" Type="int" />
+    <Property Name="idEstatus" Type="smallint" />
+  </EntityType>
+  <EntityType Name="AlumnosBaja">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="60" />
+    <Property Name="primerApellido" Type="varchar" MaxLength="50" />
+    <Property Name="segundoApellido" Type="varchar" MaxLength="50" />
+    <Property Name="fechaBaja" Type="datetime" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'EjerciciosTich.dbo.AlumnosHgo' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="AlumnosHgo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="60" />
+    <Property Name="primerApellido" Type="varchar" MaxLength="50" />
+    <Property Name="segundoApellido" Type="varchar" MaxLength="50" />
+    <Property Name="correo" Type="varchar" MaxLength="80" />
+    <Property Name="telefono" Type="nchar" MaxLength="10" />
+    <Property Name="fechaNacimiento" Type="date" />
+    <Property Name="curp" Type="char" MaxLength="18" />
+    <Property Name="sueldo" Type="decimal" Precision="9" Scale="2" />
+    <Property Name="idEstadoOrigen" Type="int" />
+    <Property Name="idEstatus" Type="smallint" />
+  </EntityType>
+  <EntityType Name="CatCursos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="clave" Type="varchar" MaxLength="15" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+    <Property Name="descripcion" Type="varchar" MaxLength="1000" />
+    <Property Name="horas" Type="tinyint" />
+    <Property Name="idPreRequisito" Type="smallint" />
+    <Property Name="activo" Type="bit" />
+  </EntityType>
+  <EntityType Name="Cursos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idCatCurso" Type="smallint" />
+    <Property Name="fechaInicio" Type="date" />
+    <Property Name="fechaTermino" Type="date" />
+    <Property Name="activo" Type="bit" />
+  </EntityType>
+  <EntityType Name="CursosAlumnos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idCurso" Type="smallint" />
+    <Property Name="idAlumno" Type="int" />
+    <Property Name="fechaInscripcion" Type="date" />
+    <Property Name="fechaBaja" Type="date" />
+    <Property Name="calificacion" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="CursosInstructores">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idCurso" Type="smallint" />
+    <Property Name="idInstructor" Type="smallint" />
+    <Property Name="fechaContratacion" Type="date" />
+  </EntityType>
+  <EntityType Name="Estados">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="EstatusAlumnos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="smallint" Nullable="false" />
+    <Property Name="clave" Type="char" MaxLength="10" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Instructores">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="60" />
+    <Property Name="primerApellido" Type="varchar" MaxLength="50" />
+    <Property Name="segundoApellido" Type="varchar" MaxLength="50" />
+    <Property Name="correo" Type="varchar" MaxLength="80" />
+    <Property Name="telefono" Type="nchar" MaxLength="10" />
+    <Property Name="fechaNacimiento" Type="date" />
+    <Property Name="rfc" Type="char" MaxLength="13" />
+    <Property Name="curp" Type="char" MaxLength="18" />
+    <Property Name="cuotaHora" Type="decimal" Precision="9" Scale="2" />
+    <Property Name="activo" Type="bit" />
+  </EntityType>
+  <EntityType Name="Saldos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" />
+    <Property Name="Saldo" Type="decimal" Precision="9" Scale="2" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TablaISR">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LimInf" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="LimSup" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="CuotaFija" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="ExedLimInf" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="Subsidio" Type="decimal" Precision="19" Scale="2" />
+  </EntityType>
+  <EntityType Name="Transacciones">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idOrigen" Type="int" />
+    <Property Name="idDestino" Type="int" />
+    <Property Name="monto" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <Association Name="FK_Alumnos_Estados">
+    <End Role="Estados" Type="Self.Estados" Multiplicity="0..1" />
+    <End Role="Alumnos" Type="Self.Alumnos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estados">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Alumnos">
+        <PropertyRef Name="idEstadoOrigen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Alumnos_EstatusAlumnos">
+    <End Role="EstatusAlumnos" Type="Self.EstatusAlumnos" Multiplicity="0..1" />
+    <End Role="Alumnos" Type="Self.Alumnos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstatusAlumnos">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Alumnos">
+        <PropertyRef Name="idEstatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CatCursos_CatCursos">
+    <End Role="CatCursos" Type="Self.CatCursos" Multiplicity="0..1" />
+    <End Role="CatCursos1" Type="Self.CatCursos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatCursos">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="CatCursos1">
+        <PropertyRef Name="idPreRequisito" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cursos_CatCursos">
+    <End Role="CatCursos" Type="Self.CatCursos" Multiplicity="0..1" />
+    <End Role="Cursos" Type="Self.Cursos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatCursos">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Cursos">
+        <PropertyRef Name="idCatCurso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CursosAlumnos_Alumnos">
+    <End Role="Alumnos" Type="Self.Alumnos" Multiplicity="0..1" />
+    <End Role="CursosAlumnos" Type="Self.CursosAlumnos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alumnos">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="CursosAlumnos">
+        <PropertyRef Name="idAlumno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CursosAlumnos_Cursos">
+    <End Role="Cursos" Type="Self.Cursos" Multiplicity="0..1" />
+    <End Role="CursosAlumnos" Type="Self.CursosAlumnos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cursos">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="CursosAlumnos">
+        <PropertyRef Name="idCurso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CursosInstructores_Cursos">
+    <End Role="Cursos" Type="Self.Cursos" Multiplicity="0..1" />
+    <End Role="CursosInstructores" Type="Self.CursosInstructores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cursos">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="CursosInstructores">
+        <PropertyRef Name="idCurso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CursosInstructores_Instructores">
+    <End Role="Instructores" Type="Self.Instructores" Multiplicity="0..1" />
+    <End Role="CursosInstructores" Type="Self.CursosInstructores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Instructores">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="CursosInstructores">
+        <PropertyRef Name="idInstructor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TransaccionDos">
+    <End Role="Saldos" Type="Self.Saldos" Multiplicity="0..1" />
+    <End Role="Transacciones" Type="Self.Transacciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Saldos">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Transacciones">
+        <PropertyRef Name="idDestino" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TransaccionUno">
+    <End Role="Saldos" Type="Self.Saldos" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Transacciones" Type="Self.Transacciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Saldos">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Transacciones">
+        <PropertyRef Name="idOrigen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EjerciciosTichModel1StoreContainer">
+    <EntitySet Name="Alumnos" EntityType="Self.Alumnos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AlumnosBaja" EntityType="Self.AlumnosBaja" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatCursos" EntityType="Self.CatCursos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cursos" EntityType="Self.Cursos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CursosAlumnos" EntityType="Self.CursosAlumnos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CursosInstructores" EntityType="Self.CursosInstructores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Estados" EntityType="Self.Estados" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EstatusAlumnos" EntityType="Self.EstatusAlumnos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Instructores" EntityType="Self.Instructores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Saldos" EntityType="Self.Saldos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TablaISR" EntityType="Self.TablaISR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transacciones" EntityType="Self.Transacciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AlumnosHgo" EntityType="Self.AlumnosHgo" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [AlumnosHgo].[id] AS [id], 
+    [AlumnosHgo].[nombre] AS [nombre], 
+    [AlumnosHgo].[primerApellido] AS [primerApellido], 
+    [AlumnosHgo].[segundoApellido] AS [segundoApellido], 
+    [AlumnosHgo].[correo] AS [correo], 
+    [AlumnosHgo].[telefono] AS [telefono], 
+    [AlumnosHgo].[fechaNacimiento] AS [fechaNacimiento], 
+    [AlumnosHgo].[curp] AS [curp], 
+    [AlumnosHgo].[sueldo] AS [sueldo], 
+    [AlumnosHgo].[idEstadoOrigen] AS [idEstadoOrigen], 
+    [AlumnosHgo].[idEstatus] AS [idEstatus]
+    FROM [dbo].[AlumnosHgo] AS [AlumnosHgo]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Alumnos_Estados" Association="Self.FK_Alumnos_Estados">
+      <End Role="Estados" EntitySet="Estados" />
+      <End Role="Alumnos" EntitySet="Alumnos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Alumnos_EstatusAlumnos" Association="Self.FK_Alumnos_EstatusAlumnos">
+      <End Role="EstatusAlumnos" EntitySet="EstatusAlumnos" />
+      <End Role="Alumnos" EntitySet="Alumnos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CatCursos_CatCursos" Association="Self.FK_CatCursos_CatCursos">
+      <End Role="CatCursos" EntitySet="CatCursos" />
+      <End Role="CatCursos1" EntitySet="CatCursos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cursos_CatCursos" Association="Self.FK_Cursos_CatCursos">
+      <End Role="CatCursos" EntitySet="CatCursos" />
+      <End Role="Cursos" EntitySet="Cursos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CursosAlumnos_Alumnos" Association="Self.FK_CursosAlumnos_Alumnos">
+      <End Role="Alumnos" EntitySet="Alumnos" />
+      <End Role="CursosAlumnos" EntitySet="CursosAlumnos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CursosAlumnos_Cursos" Association="Self.FK_CursosAlumnos_Cursos">
+      <End Role="Cursos" EntitySet="Cursos" />
+      <End Role="CursosAlumnos" EntitySet="CursosAlumnos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CursosInstructores_Cursos" Association="Self.FK_CursosInstructores_Cursos">
+      <End Role="Cursos" EntitySet="Cursos" />
+      <End Role="CursosInstructores" EntitySet="CursosInstructores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CursosInstructores_Instructores" Association="Self.FK_CursosInstructores_Instructores">
+      <End Role="Instructores" EntitySet="Instructores" />
+      <End Role="CursosInstructores" EntitySet="CursosInstructores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TransaccionDos" Association="Self.FK_TransaccionDos">
+      <End Role="Saldos" EntitySet="Saldos" />
+      <End Role="Transacciones" EntitySet="Transacciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TransaccionUno" Association="Self.FK_TransaccionUno">
+      <End Role="Saldos" EntitySet="Saldos" />
+      <End Role="Transacciones" EntitySet="Transacciones" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

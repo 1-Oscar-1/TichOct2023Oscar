@@ -1,0 +1,6 @@
+C:\Users\Tichs\Documents\Practicas C#\CRUDAlumnos\Entidades\bin\Release\Entidades.dll
+C:\Users\Tichs\Documents\Practicas C#\CRUDAlumnos\Entidades\bin\Release\Entidades.pdb
+C:\Users\Tichs\Documents\Practicas C#\CRUDAlumnos\Entidades\obj\Release\Entidades.csproj.AssemblyReference.cache
+C:\Users\Tichs\Documents\Practicas C#\CRUDAlumnos\Entidades\obj\Release\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Tichs\Documents\Practicas C#\CRUDAlumnos\Entidades\obj\Release\Entidades.dll
+C:\Users\Tichs\Documents\Practicas C#\CRUDAlumnos\Entidades\obj\Release\Entidades.pdb

@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Ciclos";
+    Dictionary<string, string> diccionario = new Dictionary<string, string>();
+}
+
+<h2>Ciclos</h2>
+
+@{
+    int suma = 0;
+    for (int i = 1; i <= 10; i++)
+    {
+        suma = suma + i;
+        <p id="p_@i">@suma</p>
+    }
+}
+
+@{
+    diccionario["HTML"] = "HTML, siglas en inglés de HyperText Markup Language, hace referencia al lenguaje de marcado para la elaboración de páginas web.";
+    diccionario["Python"] = "Python es un lenguaje de alto nivel de programación interpretado.";
+    diccionario["JavaScript"] = "JavaScript es un lenguaje de programación interpretado.";
+}
+
+<dl>
+    @{
+        foreach (var item in diccionario)
+        {
+            <dt>@item.Key</dt>
+            <dd>@item.Value</dd>
+        }
+    }
+</dl>
+
+<ol>
+    @{
+        foreach (var item in Request.ServerVariables)
+        {
+            <li>@item</li>
+        }
+    }
+</ol>

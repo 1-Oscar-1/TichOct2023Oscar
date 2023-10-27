@@ -1,0 +1,14 @@
+C:\Users\Tichs\Documents\Practicas C#\CRUDAlumnos\Negocio\bin\Release\Negocio.dll.config
+C:\Users\Tichs\Documents\Practicas C#\CRUDAlumnos\Negocio\bin\Release\Negocio.dll
+C:\Users\Tichs\Documents\Practicas C#\CRUDAlumnos\Negocio\bin\Release\Negocio.pdb
+C:\Users\Tichs\Documents\Practicas C#\CRUDAlumnos\Negocio\bin\Release\Datos.dll
+C:\Users\Tichs\Documents\Practicas C#\CRUDAlumnos\Negocio\bin\Release\Entidades.dll
+C:\Users\Tichs\Documents\Practicas C#\CRUDAlumnos\Negocio\bin\Release\Newtonsoft.Json.dll
+C:\Users\Tichs\Documents\Practicas C#\CRUDAlumnos\Negocio\bin\Release\Datos.pdb
+C:\Users\Tichs\Documents\Practicas C#\CRUDAlumnos\Negocio\bin\Release\Entidades.pdb
+C:\Users\Tichs\Documents\Practicas C#\CRUDAlumnos\Negocio\bin\Release\Newtonsoft.Json.xml
+C:\Users\Tichs\Documents\Practicas C#\CRUDAlumnos\Negocio\obj\Release\Negocio.csproj.AssemblyReference.cache
+C:\Users\Tichs\Documents\Practicas C#\CRUDAlumnos\Negocio\obj\Release\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Tichs\Documents\Practicas C#\CRUDAlumnos\Negocio\obj\Release\Negocio.csproj.CopyComplete
+C:\Users\Tichs\Documents\Practicas C#\CRUDAlumnos\Negocio\obj\Release\Negocio.dll
+C:\Users\Tichs\Documents\Practicas C#\CRUDAlumnos\Negocio\obj\Release\Negocio.pdb

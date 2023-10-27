@@ -1,0 +1,95 @@
+﻿@model Entidades.Alumnos
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Alumnos</h4>
+    <hr />
+    <div class="d-flex gap-4">
+        <div class="text-end">
+            <p><b>@Html.DisplayNameFor(model => model.nombre)</b></p>
+            <p><b>@Html.DisplayNameFor(model => model.primerApellido)</b></p>
+            <p><b>@Html.DisplayNameFor(model => model.segundoApellido)</b></p>
+            <p><b>@Html.DisplayNameFor(model => model.correo)</b></p>
+            <p><b>@Html.DisplayNameFor(model => model.telefono)</b></p>
+            <p><b>@Html.DisplayNameFor(model => model.fechaNacimiento)</b></p>
+            <p><b>@Html.DisplayNameFor(model => model.curp)</b></p>
+            <p><b>@Html.DisplayNameFor(model => model.sueldo)</b></p>
+            <p><b>Estado</b></p>
+            <p><b>Estatus</b></p>
+        </div>
+        <div class="text-start m-l">
+            <p>@Html.DisplayFor(model => model.nombre)</p>
+            <p>@Html.DisplayFor(model => model.primerApellido)</p>
+            <p>@Html.DisplayFor(model => model.segundoApellido)</p>
+            <p>@Html.DisplayFor(model => model.correo)</p>
+            <p>@Html.DisplayFor(model => model.telefono)</p>
+            <p>@Html.DisplayFor(model => model.fechaNacimiento)</p>
+            <p>@Html.DisplayFor(model => model.curp)</p>
+            <p>@Html.DisplayFor(model => model.sueldo)</p>
+            <p>@ViewBag.estado.nombre</p>
+            <p>@ViewBag.estatus.nombre</p>
+        </div>
+    </div>
+    
+</div>
+<!-- Ventana Modal -->
+<div class="modal fade" id="ventanaModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Encabezado -->
+            <div class="modal-header">
+                <h4 id="tituloModal" class="modal-title">Detalle Alumno</h4>
+                <button type="button" class="close btn btn-secondary" onclick="ocultaModal()">&times;</button>
+            </div>
+
+            <!-- Cuerpo -->
+            <div class="modal-body" id="cuerpoModal">
+                Cuerpo Modal..
+            </div>
+
+            <!-- Pie de Ventana -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" onclick="ocultaModal()">Cerrar</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<input type="button" value="IMSS" class="btn btn-primary" onclick="IMSS()">
+<input type="button" value="ISR" class="btn btn-primary mx-4" onclick="ISR()">
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }, new { @class = "btn btn-secondary my-2" }) <br />
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+<script type="text/javascript">
+function IMSS() {
+    $("#tituloModal").text("Aportaciones IMSS");
+    var urlAction = "@Url.Action("_AportacionesIMSS", "Alumnos")" + "/" + @Model.id;
+    llamadoAjaxGEThtml(urlAction, muestraModal);
+}
+function ISR() {
+    $("#tituloModal").text("Cálculo ISR");
+    var urlAction = "@Url.Action("_TablaISR", "Alumnos")" + "/" + @Model.id;
+    llamadoAjaxGEThtml(urlAction, muestraModal);
+}
+
+    function muestraModal(response) {
+        $("#cuerpoModal").html(response);
+        $("#ventanaModal").modal('show');
+    }
+
+    function ocultaModal(response) {
+        $("#ventanaModal").modal('hide');
+    }
+
+</script>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

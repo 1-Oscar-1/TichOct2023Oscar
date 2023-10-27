@@ -1,0 +1,101 @@
+﻿@model IEnumerable<Entidades.EstatusAlumnos>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.clave)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.clave)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "btn btn-warning" })
+                @Html.ActionLink("Details", "Details", new { id = item.id }, new { @class = "btn btn-success" })
+                @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "btn btn-danger" })
+                <button type="button" class="btn btn-secondary" onclick="eliminAjaxModal(@Html.DisplayFor(modelItem => item.id))">Eliminar AJAX</button>
+            </td>
+        </tr>
+    }
+
+</table>
+<!-- Ventana Modal -->
+<div class="modal fade" id="ventanaModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Encabezado -->
+            <div class="modal-header">
+                <h4 id="tituloModal" class="modal-title">TI-Capital Humano</h4>
+                <button type="button" class="close btn btn-secondary" onclick="ocultaModal()">&times;</button>
+            </div>
+
+            <!-- Cuerpo -->
+            <div class="modal-body" id="cuerpoModal">
+                Cuerpo Modal..
+            </div>
+
+            <!-- Pie de Ventana -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="ocultaModal()">Cerrar</button>
+                <button type="button" class="btn btn-danger" onclick="eliminarAjax()">Eliminar</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+function eliminAjaxModal(id) {
+    var urlAction = "@Url.Action("_EliminarAjax", "EstatusAlumnos")" + "/" + id;
+    llamadoAjaxGEThtml(urlAction, muestraModal);
+}
+function eliminarAjax() {
+    var id = $("#ModalId").text();
+    var urlAction = 'http://localhost:5118/api/EstatusAlumnos/' + id;
+    llamadoAjaxEliminar(urlAction, ocultaModal);
+}
+
+function muestraModal(response) {
+    $("#cuerpoModal").html(response);
+    $("#ventanaModal").modal('show');
+}
+
+function ocultaModal(response) {
+    $("#ventanaModal").modal('hide');
+    }
+
+    function llamadoAjaxEliminar(urlAction, funcExito) {
+        $.ajax({
+            type: 'DELETE',
+            url: urlAction,
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: funcExito,
+            error: errorGenerico
+        });
+    }
+
+</script>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
